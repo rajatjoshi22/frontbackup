@@ -1,0 +1,32 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <nav class="breadcrumb">
+      <a class="breadcrumb-item" href="home">Home</a>
+      
+      <span class="breadcrumb-item active">Mobile</span>
+    </nav>
+  </div>
+</div>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let mobile of mobiles">
+            <div class="card">
+              
+              <img src='{{mobile.imagePath}}' height="250px" width="348px" alt="">
+              <div class="card-body">
+              <h4 class="card-title" appHighlighter>{{mobile.model}}</h4>
+              <h6 class="card-subtitle text-muted" appHighlighter>{{mobile.brand}}</h6>
+              
+            </div>
+              <div class="card-body">
+                <p class="card-text">Ram:{{mobile.ram}}Gb</p>
+                <p class="card-text">Storage:{{mobile.storage}}Gb</p>
+                <p class="card-text">Processor:{{mobile.processor}}</p>
+                <a href="#" class="card-link">Add to cart</a>
+                <a href="#" class="card-link">Pay {{mobile.price | currency:'INR'  }}</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

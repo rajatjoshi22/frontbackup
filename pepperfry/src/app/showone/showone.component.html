@@ -1,0 +1,61 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <img [src]="product.imagePath" height="675px" width="550px" alt="">
+        </div>
+        <div class="col-md-6 " style="margin-top: 0px;">
+            <div class="card ">
+                <div class="card-body">
+                    <h4 class="card-title" style="font-size: 35px; font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;">{{product.productName}}</h4>
+                    <div>
+                        <h6 class="card-title" style="display: inline;">pepperfry&nbsp;&nbsp;by&nbsp;&nbsp;{{product.brand.brandName}}</h6>
+                        <div class="v-pro-pf-fulfilled-tag">Pepperfry Fulfilled</div>
+                    </div>
+                    <div id="star">
+                        <span class="fa fa-star checked " *appNumber="product.ratings "></span>
+                    </div>
+                    <div>
+                        <h3 class="card-title" style="color: orangered; margin-top: 10px;display: inline;"> {{product.price|currency:'INR'}}</h3>
+                        <h6 style="display: inline; margin-left: 30px;"><del>{{product.price*1.2|currency:'INR'}}</del>(Inclusive of all taxes)</h6>
+                    </div>
+                    <h5 class="card-title" style="margin-top: 10px;">Total Savings:{{product.price*0.20|currency:'INR'}}(20%off)</h5>
+                    <hr>
+                    <div>
+                        <h6 style="color: grey;"><a href="" style="color:orangered;display: inline;">Shopping Spreedom Sale,</a>Ending Soon Hurry
+                            <h6 style="color: lightgrey;">T&C Apply</h6>
+                        </h6>
+
+                    </div>
+                    <hr> Quantity:
+                    <button style="background-color: orangered; color: white;" (click)='decrement()'>-</button>
+                    <input type="text" name="qty" id="qty" style="width: 30px;" [(ngModel)]='qty'>
+                    <button style="background-color: orangered; color: white;" (click)='increment()'>+</button>
+
+
+                    <div style="margin-top: 40px;">
+                        <input style="background-color: orangered;  color: white; font-size: 20px; width: 200px;height: 50px;border: none; " type="submit" value="ADD TO CART">
+                        <input type="submit" style="background-color:orangered; margin-left: 30px; width: 200px; color: white;height: 50px;border: none; font-size: 20px; " value="BUY NOW">
+                    </div>
+                    <hr>
+                    <p id="msg">{{message}}</p>
+                    <h6 style="display: inline;">Delivery:</h6>
+                    <input type="text" style="margin-left: 30px; border: 1px solid lightgray; height: 30px; width: 120px;" name="zipcode" id="zipcode" [(ngModel)]='zipcode' placeholder="zipcode">
+                    <button (click)='check()' style="background-color: orangered; color: white; height: 30px; border-radius: 5px; border: none;">Check</button>
+                    <hr>
+                    <h6 class="card-text">Description:
+                        <p>
+                            {{product.description}}
+                        </p>
+                        <p>
+                            Warranty: 36 Months' Warranty
+                        </p>
+                        <p>
+                            Assembly: Carpenter Assembly
+                        </p>
+                    </h6>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

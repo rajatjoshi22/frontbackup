@@ -1,0 +1,51 @@
+<div class="container">
+
+
+    <div class="row justify-content-center" *ngFor="let order of orders">
+        <div class="col-md-4">
+            <div class="card" id="movieDetail">
+                <div class="card-body">
+                    <img [src]="order.movie.imagePath" height="300px" width="300px">
+                    <h4 class="card-title">{{order.movie.movieName}}</h4>
+
+
+                    <div>
+                        <h6 class="card-subtitle text-muted" style="display: inline;">{{order.movie.language}}</h6>
+                        <div style="display: inline; margin-left: 20px;">
+                            <span class="fa fa-star fa-lg checked" style="display: inline;" *appNumberMultiply="order.movie.ratings"></span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="col-md-4" id="userdis">
+            <div class="card" id="user">
+                <div class="card-body">
+                    <h6 class="card-title">{{order.user.loginId}}</h6>
+                    <h6 class="card-title">{{order.user.userName}}</h6>
+                    <h6 class="card-title">{{order.user.mobileNumber}}</h6>
+                    <p class="card-subtitle text-muted">Qty:{{order.ticketCount}}</p>
+                    <p class="card-text  text-muted">TotalAmount:{{order.totalPrice|currency:'INR'}}</p>
+                    <p class="card-subtitle text-muted">{{order.movie.day}}</p>
+                    <br>
+                    <div>
+                        <p class="card-text  text-muted" style="display: inline-block;margin-left: 0px;">{{order.movie.theatre.theatreName}}</p>
+
+                    </div>
+                    <div>
+                        <p class="card-text  text-muted" style="display: inline-block;">{{order.movie.theatre.city}}</p>
+                        <p class="card-text  text-muted" style="display: inline-block;margin-left: 5px;">{{order.movie.theatre.state}}</p>
+                        <p class="card-text  text-muted" style="display: inline-block;margin-left: 5px;">{{order.movie.theatre.zipcode}}</p>
+                    </div>
+                    <p class="card-text  text-muted">PaymentType:{{order.paymentMode}}</p>
+                    <a class="card-link btn-sm btn-warning" [routerLink]='["/user/delete-order",order.orderId]'>Delete Booking</a>
+                    <a href="#" class="card-link btn-sm  btn-warning" [routerLink]='["/showOne",order.movie.movieId]'>See Movie</a>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>

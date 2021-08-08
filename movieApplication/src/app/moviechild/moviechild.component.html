@@ -1,0 +1,10 @@
+<div style="border:2px solid red;background-color: yellow;margin-left: 40px;margin-top: 20px;">
+<h3>
+            {{movie.title}}&nbsp;&nbsp;
+            {{movie.language}}&nbsp;&nbsp;
+           {{movie.genre}}&nbsp;&nbsp;
+           {{movie.duration}}&nbsp;&nbsp;
+           {{movie.date | date:'shortDate'}}&nbsp;&nbsp;
+           {{movie.cost |currency:'INR'}}
+</h3>
+<div>

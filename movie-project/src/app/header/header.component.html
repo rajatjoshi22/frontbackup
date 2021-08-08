@@ -1,0 +1,65 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-lignt">
+    <a style="margin-left: 20px;" class="navbar-brand" routerLink='' routerlinkActive='active'><img src="https://dynamic.brandcrowd.com/asset/logo/de879784-83f8-403c-a5fa-fc3e02d47362/logo?v=4" height="50px" width="70px">
+        <h6>Movies360</h6>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto topnav">
+
+            <li class="nav-item">
+                <input type="text" class="form-control" name="choice" id="choice" [(ngModel)]='choice' aria-describedby="helpId" style="border: none;  width: 450px;border-bottom: 2px solid black;" placeholder="Enter city/genre/language/actor/actress">
+
+            </li>
+            <li class="nav-item " style="margin-left: 3px;">
+                <a name="search" id="search" class="btn " (click)="search()" role="button"><i class="fa fa-search"></i></a>
+            </li>
+
+
+            <li class="nav-item ">
+                <a style="margin-left: 35px;" class="nav-link " routerLink='/home' routerLinkActive='active'>Home</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Languages</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" [routerLink]="['movie-by-language',language]" *ngFor="let language of languages">{{language}}</a>
+                </div>
+            </li>
+
+
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Genres</a>
+                <div class="dropdown-menu" aria-labelledby="dropdownId">
+                    <a class="dropdown-item" [routerLink]="['movie-by-genre',genre]" *ngFor="let genre of genres">{{genre}}</a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink="about" routerLinkActive='active'>About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" routerLink='contact' routerLinkActive='active'>Contact</a>
+            </li>
+            &nbsp;
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 17px 
+                ; color: black;" *ngIf="userName==null " type="button" routerLink='/login'> <img src="data:image/png;base64,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"
+                        height="30px" width="30px"> Sign In</a>
+            </li>
+            <li *ngIf="userName==null ">
+                <h3>/</h3>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" style="font-size: 17px 
+                ; color: black;" *ngIf="userName==null " type="button" routerLink='/signup'> <img src="https://www.pngitem.com/pimgs/m/237-2370224_register-user-register-icon-png-transparent-png.png" height="30px" width="30px"> Register</a>
+            </li>
+            &nbsp; &nbsp;
+            <li class="nav-item" *ngIf="userName!=null" (click)="locate()">
+                <img src="https://cdn2.iconfinder.com/data/icons/font-awesome/1792/user-512.png" height="35px" width="40px">
+                <h6 class="text-black" style="font-size: 13px;">{{userName}}</h6>
+            </li>
+        </ul>
+    </div>
+</nav>

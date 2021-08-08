@@ -1,0 +1,23 @@
+.v-pro-pf-fulfilled-tag {
+    background: #f3f3f3 url('https://ii1.pepperfry.com/images/svg/pf-fulfilled-truck-icon.svg') no-repeat 1px center;
+    display: inline-block;
+    font-size: 1.3rem;
+    letter-spacing: .23px;
+    line-height: 12px;
+    padding: 6px 8px 6px 33px;
+    position: relative;
+    margin-left: 25px;
+    margin-top: -2px;
+}
+
+.card {
+    border: none;
+}
+
+.container {
+    margin-top: 25px;
+}
+
+.checked {
+    color: orange;
+}

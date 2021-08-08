@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h3 style="color: red;font-family: Georgia, 'Times New Roman', Times, serif;">Admin Dashboard</h3>
+    </div>
+</div>
+<div class="container">
+    <div class="col-md-12">
+        <nav class="navbar navbar-expand-sm navbar-light ">
+
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link " routerLink='add-movie' routerLinkActive='active'> <img src="https://static.thenounproject.com/png/2675922-200.png" height="30px" width="30px"> Add Movie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink='update-movie' routerLinkActive='active'> <img src="https://img.icons8.com/ios/452/available-updates.png" height="30px" width="30px"> Update Movie</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " routerLink='delete-movie' routerLinkActive='active'><img src="https://static.thenounproject.com/png/2675923-200.png" height="30px" width="30px"> Delete Movie</a>
+                    </li>
+
+                </ul>
+                <input type="submit" class="btn btn-dark" value="logout" (click)="logOut()"> &nbsp;
+            </div>
+        </nav>
+    </div>
+    <router-outlet></router-outlet>
+</div>

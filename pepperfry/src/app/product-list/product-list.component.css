@@ -1,0 +1,13 @@
+.cont-brand {
+    width: 230px;
+    height: 200px;
+    overflow-y: auto;
+}
+
+.checked {
+    color: orange;
+}
+
+.card {
+    height: 400px;
+}

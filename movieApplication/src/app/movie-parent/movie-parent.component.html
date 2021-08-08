@@ -1,0 +1,14 @@
+<div style="border: 2px solid black; background-color: purple;">
+    <ul>
+        <li *ngFor="let movie of movies" [ngStyle]='{"list-style-type":"none"}' >
+            <h3 [ngStyle]="{'background-color':movie.genre=='horror'?'white':movie.genre=='action'?'grey':'aqua'}" appMovieHighlighter>
+            {{movie.title}}&nbsp;&nbsp;
+            {{movie.language}}&nbsp;&nbsp;
+           {{movie.genre}}&nbsp;&nbsp;
+           {{movie.date | date:'shortDate'}}&nbsp;&nbsp;
+           <button (click)='showDetails(movie)'>View Movie</button>
+        </h3>
+        </li>
+    </ul>
+<app-moviechild  [movie]='movie' ></app-moviechild>
+</div>

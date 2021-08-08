@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            
+              <form (ngSubmit)="onSubmit()" #refForm=ngForm>
+                  <div class="form-group">
+                    <label for="userName">Enter Username</label>
+                    <input type="text"
+                      class="form-control" name="userName" id="userName" required [(ngModel)]="userModel.userName" aria-describedby="helpId" placeholder="">
+                  </div><div class="form-group">
+                    <label for="email">Enter Email</label>
+                    <input type="text"
+                      class="form-control" name="email" id="email" required [(ngModel)]="userModel.email" aria-describedby="helpId" placeholder="">
+                    
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Enter Password</label>
+                    <input type="password" class="form-control" required [(ngModel)]="userModel.password" name="password" id="password" placeholder="">
+                  </div>
+                  <div class="form-check" *ngFor="let gender of genders" >
+                      <label class="form-check-label">
+                      <input type="radio" class="form-check-input" required [(ngModel)]="userModel.gender" name="gender" [id]="gender" [value]="gender" >
+                      {{gender}}
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="mobileNumber">Enter MobileNo.</label>
+                    <input type="number" class="form-control" required [(ngModel)]="userModel.mobileNumber" name="mobileNumber" id="mobileNumber" aria-describedby="helpId" placeholder="">
+                  </div>
+
+                  <input type="submit" [disabled]='!refForm.valid' value="Enroll" class="btn btn-dark">
+              </form>
+            
+        </div>
+    </div>
+</div>

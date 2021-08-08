@@ -1,0 +1,22 @@
+.one{
+    background-color: springgreen;
+    color: black;
+    letter-spacing: 10px;
+}
+.two{
+    text-transform: lowercase;
+}
+.three{
+    border: 2px solid black;
+    height: 150px;
+    width: 500px;
+    border-radius: 10px;
+}
+.orange{
+    color:black;
+    background-color: orange;
+}
+.pink{
+    color: black;
+    background-color: pink;
+}

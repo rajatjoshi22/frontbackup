@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row" id="title">
+        <h3>Enter BookId Here</h3>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- <form (ngSubmit)="getBook()"> -->
+              <div class="form-group">
+                <label for="bookId">Enter BookId</label>
+                <input type="text"
+                  class="form-control" name="bookId" required #bookd="ngModel"  id="bookId" [(ngModel)]="bookId" aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted" *ngIf="bookd.invalid && bookd.touched">*Enter correct bookId </small>
+              </div>
+              <input type="submit" value="Get Book" class="btn btn-primary" [routerLink]="['update-book',bookId]">
+            <!-- </form> -->
+            <router-outlet></router-outlet>
+        </div>
+    </div>
+</div>

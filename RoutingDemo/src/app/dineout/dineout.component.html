@@ -1,0 +1,30 @@
+<br>
+<div class="container">
+    <div class="row">
+        <h3>Collections</h3>
+    </div>
+    <br>
+        <div class="row"> 
+            <h4>
+                Explore curated lists of top restaurants, cafes in your area, based on trends
+
+            </h4>
+        </div>
+    <div class="row">
+    <div class="col-md-3" *ngFor="let hotel of hotelList" >
+    
+    <div class="card">
+     
+      <img src='{{hotel.imagepath}}' height="150px" width="253px" alt="">
+      <div class="card-body">
+        <h4 class="card-title">{{hotel.hotelName}}</h4>
+        <h6 class="card-subtitle text-muted">{{hotel.location}}</h6>
+      </div>
+      <div class="card-body">
+        <a [routerLink]="['dineoutdetails',hotel.hotelId]" class="card-link">See Outlet</a>
+      </div>
+      <router-outlet></router-outlet>
+    </div>
+</div>
+</div>
+</div>

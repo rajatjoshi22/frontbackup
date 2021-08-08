@@ -1,0 +1,25 @@
+<p>binding works!</p>
+<img src='{{logo}}' ><br>
+<img [src]='logo'><br>
+<img bind-src='logo'>
+
+<button [disabled]='isdisabled' >Show Message</button>
+<button bind-disabled='isdisabled'>Hide Message</button>
+
+<button (click)="greetMessage()">Show Mesage</button>
+<h1 style="display: none;" id="heading"></h1>
+
+
+<button (click)="printMessage('Rajat')">printMessage</button>
+<h1 style="display: none;" id="display"></h1>
+
+<h1 class="header"> Simple Assigning</h1>
+<h1 [class]="headerClass"> Rajat Joshi</h1>
+<h1 [class.header]='applyHeader'>Apply header</h1>
+
+
+<!-- two way data binding -->
+<form>
+Enter name:<input [(ngModel)]=userName type="text" #uname/>
+<button (click)="printMessage(uname.value)">Show value</button>
+</form>

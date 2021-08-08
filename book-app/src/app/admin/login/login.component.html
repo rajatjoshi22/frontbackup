@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row">
+        <h3>LogIn Please!!!!</h3>
+    </div>
+    <div class="error">
+        <h6>{{errorMsg}}</h6>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form (ngSubmit)="Login()" #refForm=ngForm>
+                <div class="form-group">
+                    <label for="loginId">
+                      Enter loginId
+                  </label>
+                    <input type="text" class="form-control" required name="loginId" #logid="ngModel" id="loginId" [(ngModel)]="loginId" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="logid.invalid && logid.touched">*Plzz enter valid loginid</small>
+                </div>
+                <div class="form-group">
+                    <label for="loginId">
+                        Enter password
+                    </label>
+                    <input type="password" class="form-control" required name="password" #pass="ngModel" id="password" [(ngModel)]="password" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="pass.invalid && pass.touched">*Plzz enter valid password</small>
+                </div>
+                <input type="submit" value="Login" [disabled]="refForm.invalid" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>

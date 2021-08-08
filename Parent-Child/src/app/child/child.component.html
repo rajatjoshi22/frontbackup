@@ -1,0 +1,9 @@
+<div style="background-color: purple; color: black;border: 2px solid black; height: 200px;width: 200px;">
+<h2>Child component</h2>
+EnterChildName: <input type="text" #childName>
+<button (click)="fireEvent(childName.value)">SendData</button>
+<button  (click)="sendMessage()" >Send Message</button>
+<h3>{{parentOne}}</h3>
+<h3>{{parentTwo}}</h3>
+<h3>{{name}}</h3>
+</div>

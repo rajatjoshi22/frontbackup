@@ -1,0 +1,90 @@
+<div class="container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <img [src]="movie.imagePath" height="500px" width="500px">
+            </div>
+            <div class="col-md-6">
+                <div class="card border-link">
+                    <div class="card-body">
+                        <h1 style="font-size: 50px;" class="card-title">{{movie.movieName}}</h1>
+                        <h4 style="font-size: 25px;" class="card-text">{{movie.language}}</h4>
+                        <h4 style="font-size: 25px;" class="card-text">{{movie.genre}}</h4>
+                        <div id="display">
+                            <div style=" display: inline; height: 40px; width: 200px; align-items: center; border: 2px solid black;">
+                                <p style="font-weight: bolder; margin-right: 7px;">CBFC: U/A</p>
+                            </div>
+                            <h4 style="display: inline;">.</h4>
+                            <h4 style="font-size: 25px;" style="display: inline;" class="card-text">{{movie.duration}}</h4>
+                            <h4 style="display: inline;">.</h4>
+                            <h4 style="font-size: 25px;" style="display: inline;" class="card-text">{{movie.ageCriteria}}</h4>
+                        </div>
+                        <!-- <h5 class="card-text">Ratings:{{movie.ratings}}</h5> -->
+                        <span class="fa fa-star fa-lg checked" *appNumberforDirective="movie.ratings"></span>
+                        <h6 class="card-text">Date And Time:{{movie.day}}</h6>
+                        <h6 class="card-text">Price:{{movie.price | currency:'INR'}}</h6>
+                        <div>
+                            <p class="card-text" id="p1">{{movie.theatre.theatreName}}</p>
+                            <p class="card-text">{{movie.theatre.city}}</p>
+                            <p class="card-text">{{movie.theatre.state}}</p>
+                            <p class="card-text">{{movie.theatre.zipcode}}</p>
+                        </div>
+                        <input type="Submit" value="WatchLater" [routerLink]='["/add-to-cart",movie.movieId]' class="btn btn-dark">
+                        <input type="submit" [routerLink]="['/add-to-order',movie.movieId]" value="BuyNow" class="btn btn-dark" id="btn2">
+                        <!-- <p class="card-text">Starring:</p>
+                    <p class="card-text">Actor:{{movie.actor}}</p>
+                    <p class="card-text">Actress:{{movie.actress}}</p>
+                    <p class="card-text">Director:{{movie.director}}</p>
+                    <p class="card-text">Theatre:</p>
+                    <p class="card-text">{{movie.theatre.theatreName}}</p>
+                    <p class="card-text">{{movie.theatre.city}}</p>
+                    <p class="card-text">{{movie.theatre.state}}</p> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+
+        <div class="row">
+
+            <div class="col-md-12">
+                <h3>Description:</h3>
+                <p>{{movie.description}}</p>
+            </div>
+            <div class="col-md-12">
+                <h3>Cast:</h3>
+            </div>
+            <br>
+            <br>
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://www.pinclipart.com/picdir/middle/348-3489860_png-file-svg-males-females-icon-png-clipart.png" height="190px" width="60px" alt="">
+
+                    <h4 class="card-title">{{movie.director}}</h4>
+                    <h6 style="margin-left: 70px;" class="card-text">As Director</h6>
+
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTijsj9K4H2vSFC2EPdYUeJ3Yx59WbWcUg9hzSTyXASHzwq22bMQR7v6vykkE9-5f98sc&usqp=CAU" height="190px" width="60px" alt="">
+
+                    <h4 class="card-title">{{movie.actor}}</h4>
+                    <h6 style="margin-left: 70px;">Actor</h6>
+
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card">
+                    <img class="card-img-top" src="https://www.vhv.rs/dpng/d/421-4212919_female-user-female-user-icon-png-transparent-png.png" height="190px" width="60px">
+
+                    <h4 class="card-title">{{movie.actress}}</h4>
+                    <h6 style="margin-left: 70px;">Actress</h6>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

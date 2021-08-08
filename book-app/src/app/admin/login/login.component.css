@@ -1,0 +1,16 @@
+.row{
+    margin-top: 20px;
+    margin-left: 150px;
+}
+.error{
+    margin-left: 150px;
+    font-size: 15px;
+    color: red;
+    font-style: oblique;
+}
+input.ng-invalid.ng-touched{
+    border: 1px solid red;
+}
+#helpId{
+    color: red;
+}

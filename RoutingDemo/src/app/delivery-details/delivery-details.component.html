@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row justify-content-center"></div>
+    <div class="col-md-8">
+
+        <div class="card">
+
+            <img src='{{hotel.imagepath}}' height="450px" width="708px" alt="">
+            <div class="card-body">
+                <h4 class="card-title">{{hotel.hotelName}}</h4>
+                <h6 class="card-subtitle text-muted">{{hotel.location}}</h6>
+            </div>
+            <div class="card-body">
+                <p class="card-text">Cost:{{hotel.cost}}</p>
+                
+                 <button [routerLink]="['showmenu',hotel.hotelId]" class="btn btn-primary">Show Menu</button>
+                 <router-outlet></router-outlet>
+                
+            </div>
+
+        </div>
+
+
+    </div>
+</div>

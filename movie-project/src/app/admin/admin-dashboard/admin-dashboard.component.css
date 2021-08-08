@@ -1,0 +1,21 @@
+nav {
+    border-bottom: 1px solid grey;
+}
+
+ul>li {
+    margin-left: 10px;
+}
+
+a:hover {
+    border-bottom: 2px solid black;
+}
+
+.dropdown-menu a:hover {
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+}
+
+.container {
+    margin-top: 20px;
+}

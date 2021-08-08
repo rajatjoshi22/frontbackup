@@ -1,0 +1,69 @@
+[
+
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 10 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    },
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 12 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    },
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 11 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    },
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 17 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    },
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 18 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    },
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 15 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    },
+    {
+        "hotelName"  : "Kebab Corner" ,      
+        "hotelId" : 1 ,      
+        "imagePath" : "../assets/images/h1.jpg" ,      
+        "cost" : "rs 200 for 2" ,      
+        "rating" : "5" ,      
+        "location" : "raj Street" ,      
+        "cusineType" :[ "North Indian" , "biryani" ]
+    }
+    
+    
+    
+    ]

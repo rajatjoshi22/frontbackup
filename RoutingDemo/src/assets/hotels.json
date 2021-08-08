@@ -1,0 +1,42 @@
+[
+   { "hotelName":"My Bar",
+    "hotelId":123,
+    "imagepath":"../assets/images/img1.jpg",
+    "cost":"900 for 2",
+    "ratings":4.5,
+    "location":"Civil Lines Delhi",
+    "cuisineType":["NorthIndian","Chineese","SouthIndian"]},
+   {"hotelName":"Pizza Bite",
+    "hotelId":133,
+    "imagepath":"../assets/images/img2.jpg",
+    "cost":"1900 for 2",
+    "ratings":4.5,
+    "location":"Paschin Vihar",
+    "cuisineType":["NorthIndian","Chineese","pizza"]
+},
+   {"hotelName":"Food plaza",
+    "hotelId": 143,
+    "imagepath":"../assets/images/img3.jpg",
+    "cost":"2900 for 2",
+    "ratings":4.5,
+    "location":"Chandni Chowk",
+    "cuisineType": ["NorthIndian","Chineese","SouthIndian"]},
+  {"hotelName":"Burger king",
+    "hotelId":153,
+    "imagepath":"../assets/images/img4.jpg",
+    "cost":"900 for 2",
+    "ratings":4.5,
+    "location":"Civil Lines Delhi",
+    "cuisineType":["Burgers","NorthIndian","Chineese","SouthIndian"]
+},
+    {"hotelName":"Desi Tadka",
+        "hotelId":163,
+        "imagepath": "../assets/images/img5.jpg",
+        "cost":"3900 for 2",
+        "ratings":4.5,
+        "location":"Civil Lines Delhi",
+        "cuisineType":["NorthIndian","Chineese","SouthIndian"]
+    }
+   
+
+]

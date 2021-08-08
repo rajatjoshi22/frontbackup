@@ -1,0 +1,9 @@
+<h1>{{title}}</h1>
+<h2>{{message}}</h2>
+<button (click)='changeMessage()'>ChangeMessage</button>
+<ul *ngFor='let uname of names'>
+    <li>{{uname | uppercase}}</li>
+</ul>
+<ul *ngFor='let uname of names'>
+    <li *ngIf='uname=="Rajat"'>{{uname | uppercase}}</li>
+</ul>

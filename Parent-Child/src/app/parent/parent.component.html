@@ -1,0 +1,8 @@
+<div style="background-color: yellow; color: black;border: 2px solid black;height: 300px;width: 400px;">
+
+    <h2>Parent component</h2>
+    Enter name:  <input type="text" #parentName (keyup)=0>
+    <h2>{{message1}}</h2>
+    <h2>{{message2}}</h2>
+</div>
+<app-child  (childEvent1)="message1=$event"  (childEvent2)="message2=$event" [parentOne]="parentMessageOne" [parentTwo]="parentMessageTwo" [name]="parentName.value"></app-child>

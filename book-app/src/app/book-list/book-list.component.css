@@ -1,0 +1,14 @@
+.card {
+    margin-top: 30px;
+    border: none;
+}
+
+.card-body>img {
+    border-radius: 25px;
+}
+
+.card-body>h4,
+a {
+    margin-top: 10px;
+    margin-left: 15px;
+}

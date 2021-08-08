@@ -1,0 +1,98 @@
+<div class="container-fluid" style="background-color: rgb(245, 242, 238);">
+    <div class="row justify-content-center">
+        <h3 style="margin-top: 25px;">{{type}}</h3>
+    </div>
+    <div class="container" id="display">
+        <div class="row" style="margin-top: 15px;">
+            <div class="col-md-3" style="background-color: white;margin-top: 30px;">
+                <div class="row" style="margin-left: 20px; margin-top: 20px;">
+                    <h4>Apply Filters</h4>
+                </div>
+                <hr style="border: 1px solid black;">
+                <div class="row" style="margin-left: 20px;">
+                    <h4>BRAND</h4>
+
+                    <div class="cont-brand">
+                        <div *ngFor="let brand of brands">
+                            <input type="radio" name="brand" (click)='bAdd(brand)' />
+                            <p style="display: inline; margin-left: 10px;">{{brand}}</p><br>
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="border: 1px solid black;">
+                <div class="row" style="margin-left: 20px;">
+                    <h4>PRICE</h4>
+
+                    <div class="cont-brand" style="height: 120px;">
+                        <input type="radio" name="price" id="price" #pri (click)='pAdd(3000)' />&nbsp;Under {{3000 |currency:'INR'}}<br>
+                        <input type="radio" name="price" id="price" #pri (click)='pAdd(5000)' />&nbsp;Under {{5000 |currency:'INR'}}<br>
+                        <input type="radio" name="price" id="price" #pri (click)='pAdd(8000)' />&nbsp;Under {{8000 |currency:'INR'}}<br>
+                        <input type="radio" name="price" id="price" #pri (click)='pAdd(10000)' />&nbsp;Under {{10000 |currency:'INR'}}<br>
+                        <input type="radio" name="price" id="price" #pri (click)='pAdd(500000)' />&nbsp;Above {{10000 |currency:'INR'}}<br>
+                    </div>
+                </div>
+
+                <hr style="border: 1px solid black;">
+                <div class="row" style="margin-left: 20px;">
+                    <h4>Ratings</h4>
+
+                    <div class="cont-brand" style="height: 120px;">
+
+                        <input type="radio" name="rating" (click)='sAdd(3)' />
+                        <div id="star" style="display: inline; margin-left: 10px;">
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star "></span>
+                            <span class="fa fa-star "></span>
+                        </div><br>
+                        <input type="radio" name="rating" (click)='sAdd(4)' />
+                        <div id="star" style="display: inline; margin-left: 10px;">
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star "></span>
+                        </div><br>
+                        <input type="radio" name="rating" (click)='sAdd(5)' />
+                        <div id="star" style="display: inline; margin-left: 10px;">
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked "></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                        </div><br>
+
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="col-md-9">
+                <div class="row" style="margin-left: 20px;">
+                    <h6>{{length}} Options in {{type}} </h6>
+                </div>
+                <div class="row">
+                    <div class="col-md-4" *ngFor="let product of showProd">
+                        <div class="card" [routerLink]="['/showproduct',product.productId]">
+                            <img class="card-img-top" [src]="product.imagePath" height="250px" alt="">
+                            <div class="card-body">
+                                <h6 class="card-title">{{product.productName}}</h6>
+                                <p style="font-weight: bold;" class="text-muted">by &nbsp;{{product.brand.brandName}}</p>
+                                <div>
+                                    <p class="card-title" style="color: orangered; margin-top: 10px;display: inline;font-weight: bold;"> {{product.price|currency:'INR'}}</p>
+                                    <p style="display: inline; margin-left:10px;"><del>{{product.price*1.2|currency:'INR'}}</del></p>
+                                </div>
+                                <p class="text-muted" style="font-size: 12px; margin-top: 10px; font-weight: bold;">Save{{product.price*0.20|currency:'INR'}}(20%off)</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

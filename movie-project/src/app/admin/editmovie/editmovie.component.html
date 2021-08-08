@@ -1,0 +1,78 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h3>Edit Movie Details</h3>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form (ngSubmit)="updateMovie()" #refForm=ngForm>
+                <div class="form-group">
+                    <h6><label for="movieName">Enter Movie Name</label></h6>
+                    <input type="text" required class="form-control" name="movieName" [(ngModel)]='movie.movieName' id="movieName" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div class="form-group">
+                    <h6> <label for="ratings">Enter Ratings</label></h6>
+                    <input type="text" required class="form-control" name="ratings" id="ratings" [(ngModel)]='movie.ratings' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="movieId">Enter MovieId</label></h6>
+                    <input type="text" readonly class="form-control" name="movieId" id="movieId" [(ngModel)]='movie.movieId' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div class="form-group">
+                    <h6><label for="imagePath">Enter ImagePath</label></h6>
+                    <input type="text" class="form-control" required name="imagePath" id="imagePath" [(ngModel)]='movie.imagePath' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="ageCriteria">Enter Age Criteria</label></h6>
+                    <input type="text" class="form-control" name="ageCriteria" required id="ageCriteria" [(ngModel)]="movie.ageCriteria" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div class="form-group">
+                    <h6><label for="description">Enter Description</label></h6>
+                    <input type="text" class="form-control" name="description" required id="description" [(ngModel)]='movie.description' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="duration">Enter Duration</label></h6>
+                    <input type="text" class="form-control" name="duration" id="duration" [(ngModel)]="movie.duration" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="director">Enter Director Name</label></h6>
+                    <input type="text" class="form-control" required name="director" id="director" [(ngModel)]='movie.director' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="actor">Enter Actor Name</label></h6>
+                    <input type="text" class="form-control" name="actor" required id="actor" [(ngModel)]='movie.actor' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="actress">Enter Actress Name</label></h6>
+                    <input type="text" class="form-control" name="actress" required id="actress" [(ngModel)]='movie.actress' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="day">Enter Day and time</label></h6>
+                    <input type="datetime-local" class="form-control" name="day" required id="day" [(ngModel)]='movie.day' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="price">Enter Price</label></h6>
+                    <input type="text" class="form-control" name="price" required id="price" aria-describedby="helpId" [(ngModel)]='movie.price' placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <input type="submit" value="Update Movie" class="btn btn-dark" [disabled]='refForm.invalid'>
+            </form>
+        </div>
+
+
+
+    </div>
+</div>

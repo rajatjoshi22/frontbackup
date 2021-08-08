@@ -1,0 +1,113 @@
+<nav class="navbar navbar-expand navbar-light bg-white" style="height: 35px; padding-top: 20px;">
+    <ul class="nav navbar-nav">
+        <li class="nav-item ">
+            <a class="nav-link">
+                <h6 style="font-family: 'Times New Roman', serif;" (click)="show1()">Furniture</h6>
+            </a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6 style="font-family: 'Times New Roman', serif;">Chairs</h6>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" [routerLink]="['/product-list','Chair',chair]" *ngFor="let chair of chairs">{{chair}}</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6 style="font-family: 'Times New Roman', serif;">Mattresses</h6>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" [routerLink]="['/product-list','Mattresses',mat]" *ngFor="let mat of matts">{{mat}}</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6 style="font-family: 'Times New Roman', serif;">Cabinetry</h6>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" [routerLink]="['/product-list','Cabinetry',cab]" *ngFor="let cab of cabis">{{cab}}</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6 style="font-family: 'Times New Roman', serif;">Tables</h6>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" [routerLink]="['/product-list','Table',Table]" *ngFor="let Table of Tables">{{Table}}</a>
+            </div>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle " href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <h6 style="font-family: 'Times New Roman', serif;">Sofas</h6>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="dropdownId">
+                <a class="dropdown-item" [routerLink]="['product-list','Sofas',sofa]" *ngFor="let sofa of sofas">{{sofa}}</a>
+            </div>
+        </li>
+        <li>
+            <div id="myModal2" class="modal2">
+
+                <!-- Modal content -->
+                <div class="modal-content2">
+                    <span (click)='show2()' class="close">&times;</span>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <p>Chairs</p>
+                                <hr>
+                                <div *ngFor="let chair of chairs">
+                                    <a [routerLink]="['/product-list','Chair',chair]" (click)='show2()'>
+                                        <p style="font-size: 13px;">{{chair}}</p>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <p>Tables</p>
+                                <hr>
+                                <div *ngFor="let table of Tables">
+                                    <a [routerLink]="['/product-list','Table',table]" (click)='show2()'>
+                                        <p style="font-size: 13px;">{{table}}</p>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <p>Mattresses</p>
+                                <hr>
+                                <div *ngFor="let mat of matts">
+                                    <a [routerLink]="['/product-list','Mattresses',mat]" (click)='show2()'>
+                                        <p style="font-size: 13px;">{{mat}}</p>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <p>Cabinetry</p>
+                                <hr>
+                                <div *ngFor="let cab of cabis">
+                                    <a [routerLink]="['/product-list','Cabinetry',cab]" (click)='show2()'>
+                                        <p style="font-size: 13px;">{{cab}}</p>
+                                    </a>
+
+                                </div>
+                            </div>
+                            <div class="col-md-2">
+                                <p>Sofas</p>
+                                <hr>
+                                <div *ngFor="let sofa of sofas">
+                                    <a [routerLink]="['product-list','Sofas',sofa]" (click)='show2()'>
+                                        <p style="font-size: 13px;">{{sofa}}</p>
+                                    </a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </li>
+    </ul>
+</nav>

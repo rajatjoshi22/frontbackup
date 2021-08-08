@@ -1,0 +1,13 @@
+.topnav a:hover {
+    border-bottom: 3px solid black;
+}
+
+.btn {
+    border-radius: 10px;
+}
+
+.dropdown-menu a:hover {
+    background-color: #000000;
+    color: white;
+    text-transform: uppercase;
+}

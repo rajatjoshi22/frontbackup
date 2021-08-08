@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+var file1_1 = require("./file1");
+console.log(file1_1.greeting);
+file1_1.greet();
+var prod = new file1_1.Product("Mobile Phone", 130000);
+prod.productInfo();
+var trial = require("./file1");
+console.log(trial.greeting);
+trial.greet();
+var product = new trial.Product("Laptop", 35000);
+product.productInfo();

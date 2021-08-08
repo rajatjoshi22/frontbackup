@@ -1,0 +1,31 @@
+<p>pipeexample works!</p>
+choose category <input type="text" [(ngModel)]="filterChoice" >
+
+<ul>
+    <li *ngFor="let course of courses |filter:'category':filterChoice">
+        {{course.courseName | uppercase}}&nbsp;&nbsp;
+        {{course.category | lowercase}}&nbsp;&nbsp;
+       {{course.price}}&nbsp;&nbsp;
+       {{course.duration}}&nbsp;&nbsp;
+       {{course | json}}
+    </li>
+</ul>
+<h3>{{date}}</h3>
+<h3>{{money | currency :'INR':'code'}}</h3>
+<h3>{{date | date:'short'}}</h3>
+<h3>{{date | date:'shortDate'}}</h3>
+<h3>{{date | date:'shortTime'}}</h3>
+<h3>{{date |date:'M/d/yy'}}</h3>
+
+<h3>{{percent | percent}}</h3>
+
+<h3>{{name |slice:3:9}}</h3>
+
+
+<h3>{{0.678 | number:'1.2-5'}}</h3>
+<h3>{{25.678 | number:'5.5-9'}}</h3>
+<h3>{{0.678 | number:'1.2-2'}}</h3>
+
+<h3>{{username | title:'male'}}</h3>
+<h3>{{username2 | title:'female'}}</h3>
+<h3>{{username3 | title:'adadas'}}</h3>

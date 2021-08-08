@@ -1,0 +1,11 @@
+<div style="background-color:purple; height: 250px;width: 500px; margin-top: 20px;margin-left: 30px;border: 2px solid black;">
+<ul >
+    <li *ngFor="let course of courses"  [ngStyle]="{'list-style-type':'none'}">
+        <h3>
+           <button (click)="showCourse(course)"> {{course.courseName}}&nbsp;&nbsp;</button>
+            {{course.price}}&nbsp;&nbsp;
+            {{course.category}}&nbsp;&nbsp;
+        </h3>
+    </li>
+</ul>
+</div>

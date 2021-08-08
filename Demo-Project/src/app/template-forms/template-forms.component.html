@@ -1,0 +1,45 @@
+<div class="container">
+<div class="row">
+    <div class="col-md-6">
+        
+        <form (ngSubmit)="onSubmit()" #regForm=ngForm>
+           <div class="form-group">
+             <label for="uname">Enter Name</label>
+             <input type="text" ngModel #uname="ngModel"  required  class="form-control" minlength="5" name="uname" id="uname" aria-describedby="helpId" placeholder="">
+             <small id="helpId"  *ngIf="uname.invalid && uname.touched || uname.errors?.minlength" >*Plzz Enter valid name</small>
+             {{uname.className}}
+            </div>
+           <div class="form-group">
+             <label for="upassword">Enter Password</label>
+             <input type="password" required ngModel #upass="ngModel" class="form-control" minlength="5" name="upassword" id="upassword" placeholder="">
+             <small id="helpId"  *ngIf="upass.invalid && upass.touched || upass.errors?.minlength">*Plzz Enter valid Password</small>
+            </div>
+           <div class="form-group">
+             <label for="">Enter Email </label>
+             <input type="email" email required ngModel #uemail="ngModel" minlength="5" class="form-control" name="uemail" id="uemail" aria-describedby="emailHelpId" placeholder="">
+             <small id="helpId"  *ngIf="uemail.invalid && uemail.touched ">*Plzz Enter valid email</small>
+              {{uemail.className}}
+           </div>
+           
+           Gender:
+           <div class="form-check"*ngFor="let gender of genders" >
+               <label class="form-check-label" >
+               <input type="radio" class="form-check-input" name="gender" [id]="gender" [value]="gender" #gen>
+               {{gender}}
+               <!-- {{gen.value}} -->
+             </label>
+           </div>
+           
+           <br>
+           <input type="submit"value="Register" class="btn btn-primary" [disabled]='!regForm.valid'>
+           <!-- <div class="form-check">
+               <label class="form-check-label">
+               <input type="radio" class="form-check-input" name="gender" id="gender" value="Male" checked>
+              Male
+             </label>
+           </div> -->
+        </form>
+    
+    </div>
+</div>
+</div>

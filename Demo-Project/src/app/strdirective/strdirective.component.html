@@ -1,0 +1,87 @@
+<!-- Structural directives -->
+<h2 *ngIf="userName=='Rajat'">
+    Welcome {{userName}}
+</h2>
+
+<h2 *ngIf="uname=='Rajat' else errorTemp">
+    Welcome {{uname}}
+</h2>
+<ng-template #errorTemp>
+    <h2>Wrong User</h2>
+</ng-template>
+<input type="text" [(ngModel)]=courseName #cname>
+<button (click)="showCourse(cname.value)">ShowCourse</button>
+
+
+<!-- ngIf -->
+<p *ngIf="courseName=='Angular' then temp1 else temp2"></p>
+<ng-template #temp1>
+    <h2>{{courseName}} is a  client side javaScript framework</h2>
+</ng-template>
+<ng-template #temp2>
+    <h2>{{courseName}} is a server side javascript framework</h2>
+</ng-template>
+
+
+<!-- ngfor -->
+<ol>
+    <li *ngFor='let fruit of fruits'>
+       {{fruit}}
+    </li>
+</ol>
+
+<ul>
+    <li></li>
+    <li *ngFor='let course of courses'>
+     {{course.courseName}}&nbsp;&nbsp;
+     {{course.couseId}}&nbsp;&nbsp;
+    {{course.price}}&nbsp;&nbsp;
+    {{course.duration}}&nbsp;&nbsp;
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let course of courses">
+        <h3 *ngIf="!course.courseName.includes('a') else temp1" [class.Red]="isRed" >
+            {{course.courseName}}&nbsp;&nbsp;
+     {{course.couseId}}&nbsp;&nbsp;
+    {{course.price}}&nbsp;&nbsp;
+    {{course.duration}}&nbsp;&nbsp;
+        </h3>
+       <ng-template  #temp1 >
+         <div [class.Green]="isGreen">
+            {{course.courseName}}&nbsp;&nbsp;
+            {{course.couseId}}&nbsp;&nbsp;
+           {{course.price}}&nbsp;&nbsp;
+           {{course.duration}}&nbsp;&nbsp;
+         </div>
+
+       </ng-template>
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor='let course of courses' [ngStyle]="{'list-style-type':'none'}">
+       <h3 *appifNot="course.category=='FrontEnd'">
+        {{course.courseName}}&nbsp;&nbsp;
+        {{course.category}}&nbsp;&nbsp;
+       {{course.price}}&nbsp;&nbsp;
+       {{course.duration}}&nbsp;&nbsp;
+       </h3>
+    </li>
+</ul>
+
+Enter Name <input type="text" [(ngModel)]=name #uname (keyup)=0>
+<h3 *appNamecheck="uname.value">{{name | uppercase}}</h3>
+
+<ul>
+    <li *appNumberloop='5' [ngStyle]="{'list-style-type':'none'}">
+        App Test
+    </li>
+</ul>
+
+<!-- <ul>
+<li *appArrayloop="names">
+{{name}}
+</li>
+</ul> -->

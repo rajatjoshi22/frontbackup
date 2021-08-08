@@ -1,0 +1,58 @@
+.row {
+    margin-top: 50px;
+}
+
+.col-md-6>img {
+    border-radius: 25px;
+}
+
+.card-body {
+    margin-top: 60px;
+}
+
+.card.border-link {
+    border: none;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+}
+
+.checked {
+    color: orange;
+}
+
+.btn {
+    margin-top: 15px;
+}
+
+#btn2 {
+    margin-left: 10px;
+}
+
+p {
+    margin-left: 10px;
+    display: inline;
+}
+
+#p1 {
+    margin-left: 0px;
+}
+
+.col-md-3>.card {
+    height: 270px;
+    border: none;
+}
+
+.col-md-3>.card>h4 {
+    margin-left: 25px;
+}
+
+#display>h4 {
+    margin-left: 10px;
+}
+
+.col-md-12 {
+    margin-top: 20px;
+}

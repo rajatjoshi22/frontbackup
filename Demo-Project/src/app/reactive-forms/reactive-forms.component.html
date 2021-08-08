@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-6">
+            <form [formGroup]="signupForm"  (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                  <label for="username">Enter Name</label>
+                  <input type="text" formControlName="username"
+                    class="form-control"  name="username" id="username" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                 
+                </div>
+                <div class="form-group">
+                  <label for="password">Enter Password
+                  </label>
+                  <input type="password"
+                    class="form-control" formControlName="password" name="password" id="password" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="email">Enter Email</label>
+                  <input type="email"
+                    class="form-control"  formControlName="email" name="email" id="email" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-check" *ngFor='let gen of genders'>
+                    <label class="form-check-label">
+                    <input type="radio"  formControlName="gender" class="form-check-input" name="gender" [id]="gen" [value]="gen" >
+                    {{gen}}
+                  </label>
+                </div>
+                <div formGroupName="address">
+                       <div class="form-group">
+                         <label for="city">Enter City</label>
+                         <input type="text"
+                           class="form-control" formControlName="city" name="city" id="city" aria-describedby="helpId" placeholder="">
+                         <small id="helpId" class="form-text text-muted">Help text</small>
+                       </div>
+                       <div class="form-group">
+                        <label for="state">Enter State</label>
+                        <input type="text"
+                          class="form-control" formControlName="state" name="state" id="state" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                      </div>
+                      <div class="form-group">
+                        <label for="country">Enter Country</label>
+                        <input type="text" formControlName="country"
+                          class="form-control" name="country" id="country" aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                      </div>
+                </div>
+                <br>
+                <input type="submit" value="Register" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+</div>

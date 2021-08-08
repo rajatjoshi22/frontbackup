@@ -1,0 +1,27 @@
+
+<ul>
+    <li *ngFor="let course of courses">
+        <h3>
+            {{course.courseName}}&nbsp;
+            {{course.price}}&nbsp;
+            {{course.category}}&nbsp;
+            {{course.duration}}&nbsp;
+        </h3>
+         {{course | json}}
+    </li>
+</ul>
+
+
+<h3>using async pipe</h3>
+
+<ul>
+    <li *ngFor="let course of courseObserver |async">
+        <h3>
+            {{course.courseName}}&nbsp;
+            {{course.price}}&nbsp;
+            {{course.category}}&nbsp;
+            {{course.duration}}&nbsp;
+        </h3>
+         {{course | json}}
+    </li>
+</ul>

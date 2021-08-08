@@ -1,0 +1,19 @@
+.card {
+    margin-top: 20px;
+    border: none;
+}
+
+.card-body>img {
+    border-radius: 20px;
+}
+
+.checked {
+    color: orange;
+}
+
+.card-body>h4,
+h6,
+a,
+#star {
+    margin-left: 30px;
+}

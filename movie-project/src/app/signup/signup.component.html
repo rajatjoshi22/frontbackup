@@ -1,0 +1,56 @@
+<div class="container-fluid" style="background-image: linear-gradient(white,grey);">
+    <div class="row justify-content-center" id="heading">
+        <h3> Signup To Movies360 </h3>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form (ngSubmit)='signUp()' #refForm=ngForm [formGroup]='userSignUp' style="margin-bottom: 20px;">
+                <div class="form-group">
+                    <h6><label for="loginId">Enter Your LoginId</label></h6>
+                    <input type="email" class="form-control" email required name="loginId" id="loginId" formControlName='loginId' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="password">Enter Your Password</label></h6>
+                    <input type="password" class="form-control" name="password" required id="password" formControlName='password' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="userName">Enter UserName</label></h6>
+                    <input type="text" class="form-control" name="userName" required id="userName" formControlName='userName' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <h6><label for="mobileNumber">Enter Your MobileNumber</label></h6>
+                    <input type="text" class="form-control" name="mobileNumber" required id="mobileNumber" formControlName='mobileNumber' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div formGroupName='address'>
+                    <div class="form-group">
+                        <h6><label for="state">Select Your State:</label></h6>
+                        <select class="form-control" required id="state" #stat formControlName='state'>
+                            <option value="" disabled selected>Choose a state</option>
+                          <option *ngFor="let state of states">{{state}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <h6><label for="city">Select Your City:</label></h6>
+                        <select class="form-control" required id="city" (click)="getCities(stat.value)" formControlName='city'>
+                            <option value="" disabled selected>Choose a City</option>
+                            <option *ngFor="let city of cities">{{city}}</option>
+                        </select>
+                    </div>
+
+
+                    <div class="form-group">
+                        <h6><label for="zipcode">Enter Your Zipcode</label></h6>
+                        <input type="text" class="form-control" required name="zipcode" id="zipcode" required formControlName='zipcode' aria-describedby="helpId" placeholder="">
+                        <small id="helpId" class="form-text text-muted">Help text</small>
+                    </div>
+                </div>
+                <input type="submit" value='SignUp' class="btn btn-warning" [disabled]='refForm.invalid'>
+
+            </form>
+        </div>
+    </div>
+</div>

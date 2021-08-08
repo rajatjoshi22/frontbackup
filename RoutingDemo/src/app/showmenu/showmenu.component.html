@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row" *ngFor="let menu of hotel.menu">
+        <div class="col-md-4">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">{{menu.name}}</h4>
+                <h6 class="card-subtitle text-muted">{{menu.type}}</h6>
+                <br>
+                <h6 class="card-subtitle text-muted">{{menu.votes}} Votes</h6>
+              </div>
+              <div class="card-body">
+                <h6 class="card-text">{{menu.price |currency:"INR"}} </h6>
+                <p class="card-text">{{menu.description}}</p>
+                <a href="#" style="float: right;">Order</a>
+                
+              </div>
+            </div>
+        </div>
+
+    </div>
+</div>

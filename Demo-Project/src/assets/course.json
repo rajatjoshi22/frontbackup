@@ -1,0 +1,12 @@
+[{"courseName":"Java",
+    "courseId":123,
+    "price":12000,
+    "category":"Back End",
+    "duration":34},
+  {"courseName":"spring",
+    "courseId":133,
+    "price":22000,
+    "category":"Back End"},
+  {"courseName":"Angular","courseId":143,"price":42000,"category":"FrontEnd","duration":44},
+  {"courseName":"node","courseId":193,"price":1000,"category":"Back End","duration":1}
+]

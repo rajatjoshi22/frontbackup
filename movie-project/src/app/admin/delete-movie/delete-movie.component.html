@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h3>Delete Movie </h3>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="form-group">
+                <label for="movieId">Enter MovieId</label>
+                <input type="text" class="form-control" name="movieId" id="movieId" [(ngModel)]='movieId' aria-describedby="helpId" placeholder="">
+                <small id="helpId" class="form-text text-muted">Help text</small>
+            </div>
+            <input type="submit" value="Delete Movie" class="btn btn-dark" (click)='deleteMovie()'>
+        </div>
+
+    </div>
+</div>

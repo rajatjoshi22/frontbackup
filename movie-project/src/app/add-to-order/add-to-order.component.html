@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <h1>Place Your Booking</h1>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <form #refForm=ngForm>
+                <div class="form-group">
+                    <label for="loginId">Your LoginId</label>
+                    <input type="text" class="form-control" name="loginId" id="loginId" readonly [value]="user.loginId" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <label for="userName">Your UserName</label>
+                    <input type="text" class="form-control" name="userName" id="userName" readonly [value]='user.userName' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <label for="mobileNumber">Your MobileNumber</label>
+                    <input type="text" class="form-control" name="mobileNumber" readonly id="mobileNumber" [value]='user.mobileNumber' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+
+                </div>
+                <div class="form-group">
+                    <label for="movieName">Movie Name</label>
+                    <input type="text" class="form-control" name="movieName" id="movieName" readonly [value]='movie.movieName' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <label for="ageCriteria">Age Criteria</label>
+                    <input type="text" class="form-control" name="ageCriteria" readonly id="ageCriteria" [value]='movie.ageCriteria' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div>
+                    <label for="ticketCount">Select ticketCount:</label>
+                    <button (click)='decrement()' class="btn-warning">&nbsp;-&nbsp;</button>
+                    <input type="text" name="ticketCount" style="width: 50px;" id="ticketCount" [(ngModel)]="ticketCount">
+                    <button (click)='increment()' class="btn-warning">&nbsp;+&nbsp;</button>
+                </div>
+
+                <div class="form-group">
+                    <label for="totalPrice">Your totalPrice:</label>
+                    <input type="text" class="form-control" name="totalPrice" id="totalPrice" readonly [(ngModel)]="totalPrice" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div class="form-group">
+                    <h6><label for="paymentMode">Select Your paymentMode:</label></h6>
+                    <select class="form-control" name='paymentMode' id="paymentMode" required [(ngModel)]='paymentMode' #stat>
+
+                  <option value="debit card">Debit Card</option>
+                  <option value="credit card">Credit Card</option>
+                  <option value="charge card">Charge Card</option>
+                </select>
+                </div>
+
+                <input type="submit" (click)="onSubmit()" value="ProceedToPay" class="btn btn-dark" [disabled]='refForm.invalid'>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+.card-body>a {
+    margin-left: 10px;
+}
+
+#address {
+    margin-top: 100px;
+    margin-left: 140px;
+}
+
+#address>.card {
+    border: none;
+}
+
+.row {
+    margin-top: 20px;
+}

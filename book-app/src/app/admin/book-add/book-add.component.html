@@ -1,0 +1,50 @@
+<div class="form">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Add Your Books here!!!!!!!!</h3>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-8">
+            <form [formGroup]="addBookForm" (ngSubmit)="onSubmit()" #formRef=ngForm>
+                <div class="form-group">
+                    <label for="bookTitle">Enter BookTitle:</label>
+                    <input type="text" class="form-control" name="bookTitle" id="bookTitle" required formControlName="bookTitle" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="addBookForm.get('bookTitle').invalid && addBookForm.get('bookTitle').touched" class="form-text text-muted">*Plzz Enter Valid Name</small>
+                </div>
+                <div class="form-group">
+                    <label for="bookId">Enter BookId:</label>
+                    <input type="text" class="form-control" name="bookId" id="bookId" required formControlName="bookId" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="addBookForm.get('bookId').invalid && addBookForm.get('bookId').touched" class="form-text text-muted">*Plzz Enter Valid BookId</small>
+                </div>
+                <div class="form-group">
+                    <label for="bookCategory">Enter BookCategory:</label>
+                    <input type="text" class="form-control" name="bookCategory" required minlength="5" id="bookCategory" formControlName="bookCategory" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="addBookForm.get('bookCategory').invalid && addBookForm.get('bookCategory').touched" class="form-text text-muted">*Plzz Enter Valid Category</small>
+                </div>
+                <div class="form-group">
+                    <label for="imagePath">Enter ImagePath</label>
+                    <input type="text" class="form-control" name="imagePath" id="imagePath" formControlName='imagePath' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                    <label for="description">Enter Description</label>
+                    <input type="text" class="form-control" name="description" id="description" formControlName='description' aria-describedby="helpId" placeholder="">
+                    <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookAuthor">Enter BookAuthor:</label>
+                    <input type="text" class="form-control" name="bookAuthor" required minlength="5" id="bookAuthor" formControlName="bookAuthor" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="addBookForm.get('bookAuthor').invalid && addBookForm.get('bookAuthor').touched" class="form-text text-muted">*Plzz Enter Valid Category</small>
+                </div>
+                <div class="form-group">
+                    <label for="bookPrice">Enter BookPrice:</label>
+                    <input type="text" class="form-control" name="bookPrice" required id="bookPrice" formControlName="bookPrice" aria-describedby="helpId" placeholder="">
+                    <small id="helpId" *ngIf="addBookForm.get('bookPrice').invalid && addBookForm.get('bookPrice').touched" class="form-text text-muted">*Plzz Enter Valid Category</small>
+                </div>
+                <input type="submit" value="Add Book" [disabled]="!formRef.valid" class="btn btn-dark">
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+.row {
+    margin-top: 25px;
+}
+
+#heading {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+}
+
+#helpId {
+    color: red;
+}
+
+input {
+    border: 2px solid black;
+}
+
+.btn {
+    border: 2px solid black;
+    height: 50px;
+    width: 100px;
+    border-radius: 15px;
+}

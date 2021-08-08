@@ -1,0 +1,30 @@
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <nav class="breadcrumb">
+      <a class="breadcrumb-item" href="home">Home</a>
+      
+      <span class="breadcrumb-item active">Accessories</span>
+    </nav>
+  </div>
+</div>
+    <div class="row">
+        <div class="col-md-4" *ngFor="let acc of accessories">
+            <div class="card">
+              
+              <img src='{{acc.imagePath}}'  height="250px" width="348px" alt="">
+              <div class="card-body">
+              <h4 class="card-title" appHighlighter>{{acc.accName}}</h4>
+              <h6 class="card-subtitle text-muted" appHighlighter>{{acc.brand}}</h6>
+              <h6 class="card-subtitle text-muted" appHighlighter>{{acc.type}}</h6>
+            </div>
+              <div class="card-body">
+                <p class="card-text">{{acc.description}}</p>
+                <a href="#" class="card-link">Add To Cart</a>
+                <a href="#" class="card-link">pay {{acc.price |currency:'INR'}}</a>
+              </div>
+            </div>
+        </div>
+    </div>
+</div>

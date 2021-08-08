@@ -1,0 +1,21 @@
+
+    <div >
+       <ul >
+           <li *ngFor="let fruit of fruits">
+               <h3 *ngIf="fruit.includes('o') then temp1 "></h3>
+               <h3 *ngIf="fruit.includes('p') then temp2 "></h3>
+               <h3 *ngIf="(!fruit.includes('p'))&&(!fruit.includes('o')) then temp3"></h3>
+            <ng-template #temp1>
+                <h3 [class.orange]="isOrange">{{fruit}}</h3>
+            </ng-template>
+            <ng-template #temp2>
+                <h3 [class.pink]="isPink">{{fruit}}</h3>
+            </ng-template>
+            <ng-template #temp3>
+                <h3 [class.red]="isRed">{{fruit}}</h3>
+            </ng-template>
+           </li>
+       </ul>
+
+    </div>
+

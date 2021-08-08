@@ -1,0 +1,24 @@
+<div class="container">
+
+    <div class="row">
+        <h4>Explore curated lists of top rated movies, based on your selected genre
+        </h4>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" *ngFor='let movie of movies'>
+            <div class="card">
+                <div class="card-body">
+                    <img [src]="movie.imagePath" height="300px" width="310px">
+                    <h4 class="card-title">{{movie.movieName}}</h4>
+                    <h6 class="card-title">Price:{{movie.price|currency:'INR'}}</h6>
+                    <div id="star">
+                        <span class="fa fa-star fa-2x checked" *appNumberforDirective="movie.ratings"></span>
+                    </div>
+                    <a href="#" class="card-link" [routerLink]='["/add-to-cart",movie.movieId]'>WatchLater</a>
+                    <a href="#" class="card-link" [routerLink]='["/showOne",movie.movieId]'>Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

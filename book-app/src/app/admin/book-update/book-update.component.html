@@ -1,0 +1,49 @@
+<div>
+    <div class="row">
+        <h6>{{errorMsg}}</h6>
+    </div>
+</div>
+<div class="form" *ngIf="book!=null">
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Update Your Books here!!!!!!!!</h3>
+        </div>
+    </div>
+    <div class="row" >
+        <div class="col-md-8">
+            <form (ngSubmit)="onSubmit()">
+                <div class="form-group" >
+                  <label for="bookTitle">Book Title</label>
+                  <input type="text"
+                    class="form-control" name="booktitle" id="bookTitle" [(ngModel)]='book.bookTitle' aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="bookId">Book Id</label>
+                  <input type="text"
+                    class="form-control" name="bookId" id="bookId" readonly  [(ngModel)]="book.bookId" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="bookCategory">Book Category</label>
+                  <input type="text"
+                    class="form-control" name="bookCategory" id="bookCategory" [(ngModel)]='book.bookCategory' aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="bookAuthor">Book Author</label>
+                  <input type="text"
+                    class="form-control" name="bookAuthor" id="bookAuthor" [(ngModel)]="book.bookAuthor" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <div class="form-group">
+                  <label for="bookPrice">Book Price</label>
+                  <input type="text"
+                    class="form-control" name="bookPrice" id="bookPrice" [(ngModel)]="book.bookPrice" aria-describedby="helpId" placeholder="">
+                  <small id="helpId" class="form-text text-muted">Help text</small>
+                </div>
+                <input type="submit" value="submit" class="btn btn-primary">
+            </form>
+        </div>
+    </div>
+    </div>

@@ -1,0 +1,53 @@
+<div [ngClass]="'one two three'">
+<h3>Attribute ngClass with String</h3>
+</div>
+<div [ngClass]='appClass'>
+    <h3>Attribute ngClass with object literal</h3>
+</div>
+
+<div [ngClass]="{'one':true,'three':true}">
+    <h3>Attribute ngClass with object literal</h3>
+</div>
+
+<div [ngClass]="['one','three']">
+
+    <h3>Attribute ngClass with array</h3>
+</div>
+
+<h1 [ngStyle]="{'background-color':'red','letter-spacing':'20px'}">
+this is ngStyle demo 
+</h1>
+
+<ol>
+<li *ngFor='let fruit of fruits'>
+<h3 [ngStyle]="{'color':fruit.includes('o')?'orange':fruit.includes('p')?'pink':'blue'}">{{fruit}}</h3>
+
+</li>
+
+<ol>
+    <li *ngFor="let course of courses" [ngStyle]="{'list-style-type':'none'}">
+     <h3 *ngIf="course.category=='Back End'||course.category=='systems development'" 
+   [ngStyle]="{'color':course.courseName.includes('a')?'red':course.courseName.includes('n')?'blue':'green'}">
+        {{course.courseName}}&nbsp;&nbsp;
+       {{course.price}}&nbsp;&nbsp;
+       {{course.category}}&nbsp;&nbsp;
+       {{course.duration}}&nbsp;&nbsp;
+     </h3>
+    </li>
+</ol>
+
+<h2 [ngStyle]='getStyles()'>
+Checking ng Styles
+</h2>
+
+
+<h2>adding sample nested Attribute</h2>
+<app-sample></app-sample>
+
+
+<h2>ngSwitch component</h2>
+<div [ngSwitch]="color">
+<div *ngSwitchCase="'red'">You picked red Color</div>
+<div *ngSwitchCase="'blue'">You picked blue Color</div>
+<div *ngSwitchCase="'green'">You picked green Color</div>
+</div>

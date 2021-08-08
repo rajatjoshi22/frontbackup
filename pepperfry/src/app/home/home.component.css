@@ -1,0 +1,21 @@
+    .container {
+        margin-top: 15px;
+    }
+    
+    .card {
+        margin-top: 20px;
+    }
+    
+    #title {
+        background: red;
+        background: -webkit-linear-gradient(left, green, cyan, blue, violet, orange, yellow);
+        background: -o-linear-gradient(right, green, cyan, blue, violet, orange, yellow);
+        background: -moz-linear-gradient(right, green, cyan, blue, violet, orange, yellow);
+        background: linear-gradient(to right, green, cyan, blue, violet, orange, yellow);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    
+    .checked {
+        color: orange;
+    }

@@ -1,0 +1,7 @@
+.card{
+    margin-top: 30px;
+    height: 420px;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: hidden; 
+}
